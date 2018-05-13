@@ -1,5 +1,7 @@
 package problems.lmt.easy;
 
+import java.util.Arrays;
+
 /**
  * 删除排序数组中的重复项
  *
@@ -45,10 +47,39 @@ public class RemoveDuplicates {
          *     print(nums[i]);
          * }
          */
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        System.out.println(mySolution(nums));
+        System.out.println(Arrays.toString(nums));
     }
 
-    public static int mySolution(int[] nums){
-        return 0;
+    public static int mySolution(int[] nums) {
+        if (nums.length <= 1){
+            return nums.length;
+        }
+        int left = 0, right = 1;
+        for (; right < nums.length; right++) {
+            if (nums[left] != nums[right]){
+                left++;
+                nums[left] = nums[right];
+            }
+        }
+        return left + 1;
+    }
+
+    public static int betterSolution(int[] nums){
+        if (nums.length == 0) {
+            return 0;
+        }
+        int curP=0;
+        int curN=nums[0];
+        for(int i = 1, len = nums.length; i < len; i++){
+            if (nums[i] > curN) {
+                curP++;
+                nums[curP] = nums[i];
+                curN = nums[i];
+            }
+        }
+        return curP+1;
     }
 
 }

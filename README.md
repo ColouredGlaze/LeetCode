@@ -8,5 +8,7 @@ https://leetcode-cn.com
 5. 最长公共前缀：problems.lmt.easy.LongestCommonPrefix
 6. 有效的括号：problems.lmt.easy.IsValid
 7. 合并两个有序链表：problems.lmt.easy.MergeTwoLists
+8. 删除排序数组中的重复项：problems.lmt.easy.RemoveDuplicates
+9. 移除元素：problems.lmt.easy.RemoveElement
 ### 中等
 1. 两数相加：problems.lmt.medium.AddTwoNumbers
