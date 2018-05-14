@@ -1,5 +1,7 @@
 package problems.lmt.easy;
 
+import java.util.Arrays;
+
 /**
  * 移除元素
  *
@@ -49,5 +51,42 @@ public class RemoveElement {
          *     print(nums[i]);
          * }
          */
+        int[] nums = {2,2,2,2,2};
+        System.out.println(mySolution(nums, 3));
+        System.out.println(Arrays.toString(nums));
+    }
+
+    public static int mySolution(int[] nums, int val){
+        if (nums == null || nums.length == 0){
+            return 0;
+        }
+        int left = 0, right = 0;
+        for ( ; right < nums.length; right++) {
+            if (nums[right] != val){
+                nums[left] = nums[right];
+                left++;
+            }
+        }
+        return left;
+    }
+
+    public static int betterSolution(int[] nums, int val){
+        if(nums == null || nums.length == 0)
+            return 0;
+        int i = 0;
+        int j = nums.length - 1;
+        int temp;
+        while (i <= j){
+            while (i <= j && nums[j] == val)
+                j--;
+            while (i <= j && nums[i] != val)
+                i++;
+            if(i <= j){
+                temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+            }
+        }
+        return j + 1;
     }
 }

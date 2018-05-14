@@ -10,5 +10,6 @@ https://leetcode-cn.com
 7. 合并两个有序链表：problems.lmt.easy.MergeTwoLists
 8. 删除排序数组中的重复项：problems.lmt.easy.RemoveDuplicates
 9. 移除元素：problems.lmt.easy.RemoveElement
+10. 实现strStr()：problems.lmt.easy.StrStr
 ### 中等
 1. 两数相加：problems.lmt.medium.AddTwoNumbers
