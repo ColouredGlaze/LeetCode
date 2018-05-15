@@ -28,5 +28,38 @@ public class StrStr {
          *
          * 对于本题而言，当 needle 是空字符串时我们应当返回 0 。这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。
          */
+        System.out.println(mySolution("mississippi", "issi"));
+    }
+
+    public static int mySolution(String haystack, String needle){
+        if (null == needle || "".equals(needle)){
+            return 0;
+        }
+        char[] haystackChar = haystack.toCharArray();
+        char[] needleChar = needle.toCharArray();
+        for (int i = 0; i < haystackChar.length; i++) {
+            if (haystackChar[i] == needleChar[0]){
+                int temp = i;
+                int j = 1;
+                i++;
+                for (; j < needleChar.length && i < haystackChar.length; j++, i++) {
+                    if (haystackChar[i] != needleChar[j]) {
+                        break;
+                    }
+                }
+                if (j == needleChar.length) {
+                    return temp;
+                }
+                i = temp;
+            }
+        }
+        return -1;
+    }
+
+    public static int betterSolution(String haystack, String needle) {
+        if("".equals(needle)){
+            return 0;
+        }
+        return haystack.indexOf(needle);
     }
 }
