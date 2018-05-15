@@ -11,6 +11,7 @@ https://leetcode-cn.com
 8. 删除排序数组中的重复项：problems.lmt.easy.RemoveDuplicates
 9. 移除元素：problems.lmt.easy.RemoveElement
 10. 实现strStr()：problems.lmt.easy.StrStr
-11. 搜索插入位置:problems.lmt.easy.SearchInsert
+11. 搜索插入位置：problems.lmt.easy.SearchInsert
+12. 报数：problems.lmt.easy.CountAndSay
 ### 中等
 1. 两数相加：problems.lmt.medium.AddTwoNumbers
